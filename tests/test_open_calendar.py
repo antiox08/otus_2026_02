@@ -1,18 +1,33 @@
-import pytest
 import allure
+import pytest
 from appium import webdriver
 from appium.options.common import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
+import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.abstract_event_listener import AbstractEventListener
+from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
+
+class MyListener(AbstractEventListener):
+    def before_find(self, by, value, driver) -> None:
+        print(f'Finding {by} {value}')
+        super().before_find(by, value, driver)
+    def before_click(self, element, driver) -> None:
+        print(f'click on {element}')
+
+
+appium_server_url = 'http://localhost:4723'
+PNV_APP_PATH = "C:/Users/antio/Downloads/pnv_1.apk"
+
 options = AppiumOptions()
 options.load_capabilities({
     'platformName': "Android",
     'automationName': "UiAutomator2",
-    'appium:app': "C:/Users/antio/Downloads/pnv_1.apk"
+    'appium:app': PNV_APP_PATH,
+    'appium:uiautomator2ServerLaunchTimeout': 90000
 })
 
-appium_server_url = 'http://localhost:4723'
 
 @pytest.fixture()
 def driver():
@@ -20,49 +35,33 @@ def driver():
     yield android_driver
     android_driver.quit()
 
+
 @allure.feature("Swipe Test")
-@allure.story("Swipe to Camera")
-def test_swipe(driver):
-    wait = WebDriverWait(driver, 10)
+@allure.story("Swipe to Calendar")
+def test_swipe_to_calendar(driver):
+    Listener_driver = EventFiringWebDriver(driver, MyListener())
+    with allure.step("Перейти в таб system apps"):
+        driver.find_element(
+            AppiumBy.ANDROID_UIAUTOMATOR,
+            'new UiSelector().text("SYSTEM APPS")'
+        ).click()
+        time.sleep(11)
 
-    wait.until(
-        EC.presence_of_element_located(
-            (AppiumBy.ACCESSIBILITY_ID, "Predicted app: Package Names")
-        )
-    ).click()
 
-    wait.until(
-        EC.presence_of_element_located(
-            (AppiumBy.ACCESSIBILITY_ID, "system apps")
-        )
-    ).click()
+    while True:
+        elements = Listener_driver.find_elements(AppiumBy.ID, "com.csdroid.pkg:id/tv_title")
+        print(elements[0].rect)
 
-    for _ in range(10):
         with allure.step("Поиск элементов"):
-            elements = driver.find_elements(
-                AppiumBy.ID,
-                "com.csdroid.pkg:id/tv_title"
-            )
+            Listener_driver.swipe(elements[1].rect['x'], elements[1].rect['y'],
+                         elements[0].rect['x'], elements[0].rect['y'])
 
-        if not elements:
-            pytest.fail("Элементы не найдены")
-
-        with allure.step("Выполнение свайпа"):
-            start_x = elements[0].rect['x'] + 10
-            start_y = elements[0].rect['y']
-            end_x = start_x
-            end_y = start_y - 600
-
-            driver.swipe(start_x, start_y, end_x, end_y, 800)
-
-        with allure.step("Поиск элементов после свайпа"):
-            elements = driver.find_elements(
-                AppiumBy.ID,
-                "com.csdroid.pkg:id/tv_title"
-            )
+            elements = Listener_driver.find_elements(AppiumBy.ID, "com.csdroid.pkg:id/tv_title")
             element_names = [el.text for el in elements]
+            print(element_names)
 
-        if 'Camera' in element_names:
-            break
-    else:
-        pytest.fail("Camera не найдена после свайпов")
+            if 'Calendar' in element_names:
+                break
+
+    with allure.step("Тест завершен — Calendar найден"):
+        pass

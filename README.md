@@ -27,3 +27,8 @@
 - JDK  
 
 Не забудь добавить пути к SDK и JDK в переменные окружения (`PATH`).
+
+## 6. Запуск allure
+pip install allure-pytest
+py.test --alluredir=allure_result ./tests 
+allure serve allure_result
