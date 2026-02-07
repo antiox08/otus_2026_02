@@ -1,6 +1,7 @@
+Как начать:
+
 Установить переменные окружения:
 python -m venv mobail
-
 mobail\Scripts\activate
 
 Установить зависимости:
