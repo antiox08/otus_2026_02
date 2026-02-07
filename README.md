@@ -1,24 +1,29 @@
-Как начать:
+# Начало работы
 
-Установить переменные окружения:
-python -m venv mobail
-mobail\Scripts\activate
+## 1. Установка виртуального окружения
+Создаём и активируем окружение:  
+`python -m venv mobail`  
+`mobail\Scripts\activate`  (для Windows)  
+`# source mobail/bin/activate`  (для macOS/Linux)  
 
-Установить зависимости:
-pip install -r requirements.txt
+## 2. Установка зависимостей
+`pip install -r requirements.txt`  
 
-Appium inspector:
-appium plugin install inspector
-appium --use-plugins=inspector
-http://127.0.0.1:4723/inspector
-(либо установить десктоп)
-winget install AppiumDevelopers.AppiumInspector
+## 3. Appium Inspector
+### Через плагин
+`appium plugin install inspector`  
+`appium --use-plugins=inspector`  
+После запуска откройте в браузере: `http://127.0.0.1:4723/inspector`  
 
-Appium Server:
-appium
+### Через десктопное приложение
+`winget install AppiumDevelopers.AppiumInspector`  (для Windows)  
 
-Установить
-Android studio
-SDK
-JDK
-Прописать path в переменных средах
+## 4. Appium Server
+Запуск сервера: `appium`  
+
+## 5. Необходимое ПО
+- Android Studio  
+- Android SDK  
+- JDK  
+
+Не забудь добавить пути к SDK и JDK в переменные окружения (`PATH`).
