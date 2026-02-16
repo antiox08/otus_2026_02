@@ -1,0 +1,44 @@
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 63, 'width': 769, 'x': 179, 'y': 392}
+Finding id com.csdroid.pkg:id/tv_title
+['3 Button Navigation Bar', 'Ad Privacy', 'android.auto_generated_characteristics_rro', 'android.auto_generated_rro_product__', 'android.auto_generated_rro_vendor__', 'Android Accessibility Suite', 'Android Auto', 'Android Easter Egg', 'Android Glasses Core', 'Android Services Library', 'Android Shared Library']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 63, 'width': 769, 'x': 179, 'y': 381}
+Finding id com.csdroid.pkg:id/tv_title
+['Ad Privacy', 'android.auto_generated_characteristics_rro', 'android.auto_generated_rro_product__', 'android.auto_generated_rro_vendor__', 'Android Accessibility Suite', 'Android Auto', 'Android Easter Egg', 'Android Glasses Core', 'Android Services Library', 'Android Shared Library', 'Android Switch']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 51, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['android.auto_generated_characteristics_rro', 'android.auto_generated_rro_product__', 'android.auto_generated_rro_vendor__', 'Android Accessibility Suite', 'Android Auto', 'Android Easter Egg', 'Android Glasses Core', 'Android Services Library', 'Android Shared Library', 'Android Switch', 'Android System']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 57, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['android.auto_generated_rro_product__', 'android.auto_generated_rro_vendor__', 'Android Accessibility Suite', 'Android Auto', 'Android Easter Egg', 'Android Glasses Core', 'Android Services Library', 'Android Shared Library', 'Android Switch', 'Android System', 'Android System Intelligence']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 31, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['android.auto_generated_rro_vendor__', 'Android Accessibility Suite', 'Android Auto', 'Android Easter Egg', 'Android Glasses Core', 'Android Services Library', 'Android Shared Library', 'Android Switch', 'Android System', 'Android System Intelligence', 'Android System WebView']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 54, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['Android Accessibility Suite', 'Android Auto', 'Android Easter Egg', 'Android Glasses Core', 'Android Services Library', 'Android Shared Library', 'Android Switch', 'Android System', 'Android System Intelligence', 'Android System WebView', 'Basic Daydreams']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 37, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['Android Auto', 'Android Easter Egg', 'Android Glasses Core', 'Android Services Library', 'Android Shared Library', 'Android Switch', 'Android System', 'Android System Intelligence', 'Android System WebView', 'Basic Daydreams', 'Blocked Numbers Storage']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 42, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['Android Easter Egg', 'Android Glasses Core', 'Android Services Library', 'Android Shared Library', 'Android Switch', 'Android System', 'Android System Intelligence', 'Android System WebView', 'Basic Daydreams', 'Blocked Numbers Storage', 'Bluetooth']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 41, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['Android Glasses Core', 'Android Services Library', 'Android Shared Library', 'Android Switch', 'Android System', 'Android System Intelligence', 'Android System WebView', 'Basic Daydreams', 'Blocked Numbers Storage', 'Bluetooth', 'Bluetooth MIDI Service']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 46, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['Android Services Library', 'Android Shared Library', 'Android Switch', 'Android System', 'Android System Intelligence', 'Android System WebView', 'Basic Daydreams', 'Blocked Numbers Storage', 'Bluetooth', 'Bluetooth MIDI Service', 'Bookmark Provider']
+Finding id com.csdroid.pkg:id/tv_title
+{'height': 40, 'width': 769, 'x': 179, 'y': 360}
+Finding id com.csdroid.pkg:id/tv_title
+['Android Shared Library', 'Android Switch', 'Android System', 'Android System Intelligence', 'Android System WebView', 'Basic Daydreams', 'Blocked Numbers Storage', 'Bluetooth', 'Bluetooth MIDI Service', 'Bookmark Provider', 'Calendar']
